@@ -1,0 +1,219 @@
+/* Base styles for the calculator */
+.calculator {
+    width: 100%;
+    max-width: 400px; /* Limit the maximum width */
+    margin: auto;
+    border: 1px solid #1c2833; /* Darker shade for contrast */
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #34495e; /* Muted blue-gray */
+    box-sizing: border-box;
+	margin-top: 100px
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    text-align: right;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 70px;
+    background-color: #2e4053; /* Darker background for the display */
+    color: #ecf0f1; /* Light font color for readability */
+}
+
+.buttons {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #2c3e50; /* Dark but distinct from the calculator body */
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #aed6f1;
+    color: #34495e;
+    transition: all 0.1s ease-in-out;
+}
+
+button:hover {
+    background-color: #5dade2;
+    color: white;
+}
+
+button:active {
+    transform: scale(0.95); /* Shrink the button to 95% of its original size */
+    transition: transform 0.1s ease-in-out; /* Smooth transition */
+}
+
+.equal {
+    background-color: #e74c3c; /* Vibrant red for attention */
+    color: white;
+}
+
+.operator {
+    background-color: #f7dc6f; /* Muted yellow for a soft contrast */
+    color: #34495e;
+}
+
+.clear {
+    background-color: #76d7c4; /* Teal for a distinct functional color */
+    color: #1c2833;
+}
+
+button.equal {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px;
+    grid-column: span 4; /* Make the button span across 2 columns */
+}
+
+button.equal:hover {
+    background-color: #d43120;
+}
+
+/* Nonameyet section styles */
+p {
+    color: #ecf0f1; /* Consistent light color for text */
+}
+
+.nonameyet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Theme button styles */
+#themes {
+    background-color: #aed6f1;
+    border: none;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    font-size: 12px;
+}
+
+#themes:hover {
+    background-color: #5dade2; /* Slightly darker blue for hover effect */
+    color: white; /* Text changes to white on hover */
+}
+
+#themes:active {
+    transform: scale(1.0); /* Subtle click effect */
+    background-color: #3498db; /* More pronounced blue for active state */
+}
+
+/* Dropdown menu styling */
+#theme-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+    margin-top: 5px;
+}
+
+#theme-menu button {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #34495e;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    transition: all 0.2s ease-in-out;
+}
+
+#theme-menu button:hover {
+    background-color: #f0f0f0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .calculator {
+        padding: 10px;
+    }
+
+    #display {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    button.equal {
+        font-size: 16px;
+        padding: 10px;
+        grid-column: span 4;
+    }
+
+    .nonameyet {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    #themes {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    #display {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 6px;
+    }
+	
+	
+
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    button.equal {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
